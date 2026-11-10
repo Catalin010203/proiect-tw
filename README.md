@@ -3,14 +3,14 @@
 
 ## 1. Descrierea proiectului
 
-Academic Events este o aplicatie web destinata organizarii si gestionarii evenimentelor academice, precum conferinte, 
-workshopuri si prezentari. Platforma permite organizatorilor sa publice evenimente, sa gestioneze participantii si agenda, 
+Academic Events este o aplicatie web destinata organizarii si gestionarii evenimentelor academice, precum conferinte,
+workshopuri si prezentari. Platforma permite organizatorilor sa publice evenimente, sa gestioneze participantii si agenda,
 iar utilizatorilor sa consulte evenimentele disponibile si sa se inscrie.
 
 ## 2. Problema abordata
 
 Organizarea evenimentelor academice implica gestionarea participantilor, a inscrierilor si a informatiilor despre evenimente,
-procese care pot deveni dificile atunci cand sunt realizate prin intermediul mai multor platforme. 
+procese care pot deveni dificile atunci cand sunt realizate prin intermediul mai multor platforme.
 Aplicatia propusa centralizeaza aceste activitati intr-un singur sistem.
 
 ## 3. Obiective
@@ -25,7 +25,7 @@ Aplicatia propusa centralizeaza aceste activitati intr-un singur sistem.
 
 - Organizatori: creeaza si gestioneaza evenimentele si participantii.
 - Participanti: consulta evenimentele disponibile si se inscriu la acestea.
-- Admin: gestioneaza conturile utilizatorilor, atribuie roluri, monitorizeaza evenimentele si poate interveni pentru 
+- Admin: gestioneaza conturile utilizatorilor, atribuie roluri, monitorizeaza evenimentele si poate interveni pentru
 - administrarea si mentinerea functionarii corecte a platformei.
 
 ## 5. Functionalitati principale
@@ -86,3 +86,6 @@ Aplicatia propusa centralizeaza aceste activitati intr-un singur sistem.
 ## 10. Limitari
 
 Aplicatia nu include procesarea platilor online, organizarea transportului sau integrarea cu platforme externe.
+=======
+# proiect-tw
+>>>>>>> a725674649dfc88de57435bad9f54b24968046af
