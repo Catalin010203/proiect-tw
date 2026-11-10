@@ -86,6 +86,3 @@ Aplicatia propusa centralizeaza aceste activitati intr-un singur sistem.
 ## 10. Limitari
 
 Aplicatia nu include procesarea platilor online, organizarea transportului sau integrarea cu platforme externe.
-=======
-# proiect-tw
->>>>>>> a725674649dfc88de57435bad9f54b24968046af
