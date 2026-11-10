@@ -44,3 +44,7 @@ si interactioneaza cu baza de date MySQL. Rezultatele sunt returnate frontendulu
 ## 6. Securitate
 
 Accesul la aplicatie va fi protejat prin autentificare si autorizare. In functie de rolul utilizatorului (Admin, Organizator sau Participant), vor fi disponibile functionalitati diferite.
+
+## 7. Diagrama arhitecturii
+
+![Diagrama arhitecturii aplicatiei](diagrams/architecture.png)
