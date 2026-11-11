@@ -1,2 +1,3 @@
 [Link Design-uri Figma](https://www.figma.com/design/sWnkbRMQ2LdNbZifoDTsul/Academic-Events?node-id=0-1&t=SmWRfb6viY50ee5f-1)
-[Prototip](https://www.figma.com/proto/sWnkbRMQ2LdNbZifoDTsul/Academic-Events?node-id=1-3&p=f&viewport=320%2C212%2C0.12&t=kSGlOCcM1yrYL7Hp-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A3&page-id=0%3A1)
+
+[Link Prototip Figma](https://www.figma.com/proto/sWnkbRMQ2LdNbZifoDTsul/Academic-Events?node-id=1-3&p=f&viewport=320%2C212%2C0.12&t=kSGlOCcM1yrYL7Hp-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A3&page-id=0%3A1)
