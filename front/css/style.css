@@ -25,7 +25,6 @@ h1, h2, h3, h4, h5, h6, .serif-font {
     color: var(--navy);
 }
 
-/* Navbar */
 .navbar {
     background-color: var(--white);
     padding: 15px 0;
@@ -41,30 +40,23 @@ h1, h2, h3, h4, h5, h6, .serif-font {
     color: var(--navy) !important;
     font-weight: 500;
     margin: 0 10px;
-    padding-bottom: 5px; /* Spațiu pentru linie */
-    border-bottom: 2px solid transparent; /* Linie invizibilă by default */
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
     transition: color 0.3s ease, border-color 0.3s ease;
 }
-
-/* Hover pe orice link din navbar */
 .nav-link:hover {
     color: var(--blue) !important;
-    border-bottom: 2px solid var(--blue); /* Linia apare și devine albastră */
+    border-bottom: 2px solid var(--blue);
 }
-
-/* Link-ul activ (Home) */
 .nav-link.active {
     color: var(--navy) !important;
-    border-bottom: 2px solid var(--navy); /* Linia rămâne navy când e activ */
+    border-bottom: 2px solid var(--navy);
 }
-
-/* Hover pe link-ul activ - schimbă culoarea și linia în albastru */
 .nav-link.active:hover {
     color: var(--blue) !important;
     border-bottom: 2px solid var(--blue);
 }
 
-/* Butoane */
 .btn-outline-primary {
     border-color: var(--navy);
     color: var(--navy);
@@ -88,21 +80,18 @@ h1, h2, h3, h4, h5, h6, .serif-font {
     color: var(--white);
 }
 
-/* Hero Section - Full Width */
 .hero-section {
     background-color: var(--light-blue);
     position: relative;
     width: 100%;
     margin-bottom: 50px;
-    /* Imaginea de fundal pentru banner - se întinde pe toată secțiunea */
     background-image: url('../images/bannerPNG.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 550px; /* Asigură o înălțime minimă pentru a se vedea imaginea */
+    min-height: 550px; 
 }
 
-/* Textul din Hero - împins spre dreapta */
 .hero-text {
     padding: 80px 5% 80px 15%;
     width: 100%;
@@ -127,8 +116,6 @@ h1, h2, h3, h4, h5, h6, .serif-font {
     max-width: 500px;
 }
 
-
-/* Cards - Evenimente */
 .event-card {
     border: 1px solid #e1e8f0;
     border-radius: var(--border-radius);
@@ -158,24 +145,18 @@ h1, h2, h3, h4, h5, h6, .serif-font {
     font-weight: 600;
 }
 
-/* Secțiunea About / Footer - Full Width cu imagine de fundal */
 .about-section {
-    /* Aici punem imaginea footer.png ca fundal literal */
     background-image: url('../images/footer.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: var(--navy); /* Fallback dacă imaginea nu se încarcă */
-    
+    background-color: var(--navy);
     color: var(--white);
-    padding: 100px 0; /* Padding mai mare pentru a se vedea imaginea */
+    padding: 100px 0;
     width: 100%;
     margin-top: 50px;
     position: relative;
 }
-
-
-
 
 .about-section h2 {
     font-size: 2.5rem;
@@ -185,7 +166,6 @@ h1, h2, h3, h4, h5, h6, .serif-font {
     color: var(--light-blue) !important;
 }
 
-/* Utilities */
 .text-muted-small {
     font-size: 0.85rem;
     color: var(--text-muted);
@@ -195,27 +175,17 @@ h1, h2, h3, h4, h5, h6, .serif-font {
     color: var(--blue);
 }
 
-/* Hover pentru link-urile "View Details" și "View all events" */
 a.view-link {
     color: var(--navy);
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
 a.view-link:hover {
     color: var(--blue) !important;
 }
-
-/* Alternativ, dacă nu vrei să adaugi clasa în HTML, poți folosi selectorul pe atributul href */
 a[href="#"].view-link {
     color: var(--navy);
 }
-
-
-
-/* =========================================
-   PAGINA DE LOGIN / REGISTER
-   ========================================= */
 
 .auth-body {
     background-color: var(--light-gray);
@@ -224,7 +194,7 @@ a[href="#"].view-link {
     align-items: center;
     justify-content: center;
     margin: 0;
-    overflow: hidden; /* Previne scroll-ul pe pagina de login */
+    overflow: hidden; 
 }
 
 .login-container {
@@ -238,9 +208,7 @@ a[href="#"].view-link {
     display: flex;
 }
 
-/* Partea Stângă (Imagine) */
 .login-left {
-    /* Poți schimba cu o imagine proprie, ex: url('login-bg.png') */
     background-image: linear-gradient(rgba(59, 101, 143, 0.1), rgba(59, 101, 143, 0.5)), url(../images/login.jpg);
     background-size: cover;
     background-position: left;
@@ -273,7 +241,6 @@ a[href="#"].view-link {
     background-color: var(--light-blue);
     margin: 20px auto;
 }
-
 
 .login-right {
     padding: 50px;
@@ -354,7 +321,6 @@ a[href="#"].view-link {
     border-color: transparent;
 }
 
-/* Butonul de Submit */
 .btn-submit {
     background-color: var(--navy);
     color: var(--white);
@@ -371,7 +337,6 @@ a[href="#"].view-link {
     color: var(--white);
 }
 
-/* Link-uri în formulare */
 .auth-link {
     color: var(--navy);
     text-decoration: none;
@@ -382,12 +347,10 @@ a[href="#"].view-link {
     color: var(--blue);
 }
 
-/* Ascundem formularul de register inițial */
 #register-form {
     display: none;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .login-container {
         flex-direction: column;
@@ -404,15 +367,10 @@ a[href="#"].view-link {
         padding: 30px;
     }
     .auth-body {
-        overflow: auto; /* Permite scroll pe mobil */
+        overflow: auto;
     }
 }
 
-/* =========================================
-   PAGINA DE EVENTS
-   ========================================= */
-
-/* Bara de căutare */
 .search-bar {
     position: relative;
 }
@@ -437,7 +395,6 @@ a[href="#"].view-link {
     box-shadow: 0 0 0 3px rgba(57, 118, 168, 0.15);
 }
 
-/* Butoane de filtrare */
 .filter-btn {
     border-radius: 20px;
     padding: 8px 20px;
@@ -463,7 +420,6 @@ a[href="#"].view-link {
     border-color: var(--blue);
 }
 
-/* Selector sortare */
 .sort-select {
     border-radius: 20px;
     border: 1px solid #e1e8f0;
@@ -480,7 +436,6 @@ a[href="#"].view-link {
     box-shadow: 0 0 0 3px rgba(57, 118, 168, 0.15);
 }
 
-/* Badge-uri pentru carduri (deja existent, dar îl redefinim pentru consistență) */
 .badge-custom {
     position: absolute;
     top: 15px;
@@ -494,47 +449,38 @@ a[href="#"].view-link {
     z-index: 10;
 }
 
-
-/* =========================================
-   PAGINA ABOUT (Actualizat cu fundal)
-   ========================================= */
-
-/* Secțiunea mare cu imaginea de fundal */
 .about-hero-section {
-    /* AICI PUI NUMELE IMAGINII TALE */
     background-image: url('../images/about-bg.webp'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    min-height: 80vh; /* Ocupă o mare parte din înălțimea ecranului */
+    min-height: 80vh; 
     padding: 80px 0;
-    background-color: var(--light-blue); /* Fallback dacă nu încarcă imaginea */
+    background-color: var(--light-blue); 
 }
 
-/* Stilizează textul din dreapta pentru a fi lizibil direct pe imagine */
 .about-content-box {
-    padding: 20px 0 20px 40px; /* Păstrăm un pic de padding în stânga pentru a nu fi lipit de centru */
+    padding: 20px 0 20px 40px; 
 }
 
 .about-content-box h1 {
     color: var(--navy);
-    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4); /* Umbră albă subtilă pentru contrast pe cer */
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4); 
 }
 
 .about-content-box h2 {
-    color: var(--blue); /* Albastrul din paletă pentru subtitlu */
+    color: var(--blue); 
 }
 
 .about-content-box p {
     color: var(--navy);
     font-size: 1.1rem;
     line-height: 1.7;
-    font-weight: 500; /* Textul puțin mai gros pentru a se citi mai bine peste imagine */
-    text-shadow: 0 1px 5px rgba(255, 255, 255, 0.5); /* Umbră albă fină */
+    font-weight: 500; 
+    text-shadow: 0 1px 5px rgba(255, 255, 255, 0.5); 
 }
 
-/* Restul stilurilor pentru Values, Stats, CTA rămân aceleași */
 .values-section {
     background-color: var(--light-gray);
 }
@@ -585,13 +531,8 @@ a[href="#"].view-link {
     color: var(--text-muted);
 }
 
-
-/* =========================================
-   PAGINA DE DASHBOARD (Full Screen)
-   ========================================= */
-
 .dashboard-body {
-    background-color: var(--white); /* Fundalul general devine alb */
+    background-color: var(--white); 
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -599,22 +540,20 @@ a[href="#"].view-link {
     overflow-x: hidden;
 }
 
-/* Containerul principal ocupă tot ecranul */
 .dashboard-container {
     display: flex;
     width: 100vw;
     min-height: 100vh;
 }
 
-/* --- SIDEBAR --- */
 .dash-sidebar {
-    width: 260px; /* Puțin mai lat pentru ecran mare */
+    width: 260px; 
     background-color: var(--navy);
     color: var(--white);
     display: flex;
     flex-direction: column;
     padding: 30px 20px;
-    flex-shrink: 0; /* Să nu se micșoreze */
+    flex-shrink: 0; 
 }
 
 .dash-brand {
@@ -659,15 +598,13 @@ a[href="#"].view-link {
     margin-top: auto;
 }
 
-/* --- MAIN CONTENT --- */
 .dash-main {
     flex-grow: 1;
-    padding: 50px 60px; /* Padding generos pe ecran mare */
+    padding: 50px 60px; 
     position: relative;
     background-color: var(--white);
 }
 
-/* Zona de sus cu textul de bun venit */
 .dash-top-section {
     position: relative;
     margin-bottom: 50px;
@@ -685,8 +622,6 @@ a[href="#"].view-link {
     font-size: 1.05rem;
 }
 
-
-/* --- STATISTICI --- */
 .dash-stats-row {
     position: relative;
     z-index: 2;
@@ -729,7 +664,6 @@ a[href="#"].view-link {
     margin-bottom: 0;
 }
 
-/* --- CARD EVENIMENT --- */
 .dash-event-card {
     display: flex;
     align-items: center;
@@ -777,7 +711,6 @@ a[href="#"].view-link {
     border-color: var(--blue);
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 991px) {
     .dashboard-container {
         flex-direction: column;
@@ -830,7 +763,6 @@ a[href="#"].view-link {
     }
 }
 
-/* Link-ul pentru logo din sidebar */
 .dash-brand .brand-link {
     display: inline-block;
     color: var(--white);
@@ -839,20 +771,14 @@ a[href="#"].view-link {
 }
 
 .dash-brand .brand-link:hover {
-    color: var(--white); /* Rămâne alb la hover */
-    opacity: 0.8; /* Efect subtil la hover */
+    color: var(--white); 
+    opacity: 0.8; 
 }
-
-
-/* =========================================
-   PAGINA EVENT DETAILS (Design actualizat)
-   ========================================= */
 
 .event-details-body {
-    background-color: var(--light-gray); /* Fundalul gri foarte deschis */
+    background-color: var(--light-gray); 
 }
 
-/* Badge-ul de categorie (Conference) */
 .badge-category {
     background-color: var(--light-blue);
     color: var(--navy);
@@ -862,14 +788,12 @@ a[href="#"].view-link {
     border-radius: 20px;
 }
 
-/* Iconițele din dreptul detaliilor (calendar, locatie, user) */
 .meta-icon {
     color: var(--navy);
     width: 20px;
     margin-right: 8px;
 }
 
-/* Badge-ul pentru locuri disponibile */
 .badge-spots {
     background-color: transparent;
     border: 1px solid var(--blue);
@@ -881,40 +805,32 @@ a[href="#"].view-link {
     display: inline-block;
 }
 
-/* Cardul lateral "Event Details" */
 .event-details-card {
     background-color: var(--white);
     border: 1px solid #e1e8f0;
     box-shadow: 0 4px 15px rgba(11, 45, 79, 0.03);
 }
 
-/* Agenda - ultimul rând nu mai are border-bottom */
 .agenda-item:last-child {
     border-bottom: none !important;
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
 }
 
-/* =========================================
-   PAGINA 404 (Error)
-   ========================================= */
-
 .error-body {
     background-color: var(--light-gray);
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Previne scroll-ul pe pagina de eroare */
+    overflow: hidden; 
 }
 
-/* Containerul principal - ocupă tot spațiul rămas sub navbar */
 .error-container {
     flex-grow: 1;
     position: relative;
     overflow: hidden;
 }
 
-/* Numărul 404 uriaș */
 .error-code {
     font-size: 10rem;
     line-height: 1;
@@ -924,7 +840,6 @@ a[href="#"].view-link {
     font-weight: 700;
 }
 
-/* Forme geometrice decorative (asemănătoare cu cercurile din designul tău) */
 .error-shape {
     position: absolute;
     border-radius: 50%;
@@ -949,7 +864,6 @@ a[href="#"].view-link {
     opacity: 0.2;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .error-code {
         font-size: 7rem;
