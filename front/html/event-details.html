@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Events - Event Details</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Rufina & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- CSS-ul tău principal -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="event-details-body">
+
+    <!-- Navbar (identic cu restul paginilor) -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i>Academic Events
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" class="text-dark"><i class="fas fa-search"></i></a>
+                    <a href="login.html" class="btn btn-outline-primary rounded-pill">Login</a>
+                    <a href="login.html" class="btn btn-primary rounded-pill">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conținut principal -->
+    <div class="container py-5">
+        
+        <!-- Rândul de sus: Imagine și detalii -->
+        <div class="row g-5 mb-5">
+            <!-- Imaginea din stânga -->
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
+                     alt="International Research Conference" 
+                     class="img-fluid rounded-4 w-100 shadow-sm" 
+                     style="object-fit: cover; height: 100%; min-height: 350px;">
+            </div>
+            
+            <!-- Detaliile din dreapta -->
+            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                
+                <h1 class="serif-font display-5 mb-4" style="color: var(--navy);">International Research Conference</h1>
+                
+                <div class="event-meta-list mb-4">
+                    <div class="mb-2"><i class="far fa-calendar-alt meta-icon"></i> Apr 24, 2025 · 09:00</div>
+                    <div class="mb-2"><i class="fas fa-map-marker-alt meta-icon"></i> Main Auditorium</div>
+                    <div class="mb-2"><i class="far fa-user meta-icon"></i> Organized by Academic Events</div>
+                </div>
+
+                <!-- Badge locuri disponibile -->
+                <div class="mb-4">
+                    <span class="badge-spots">
+                        120 spots left
+                    </span>
+                </div>
+
+                <!-- Buton Înregistrare -->
+                <div>
+                    <a href="#" class="btn btn-primary btn-lg rounded-pill px-5 py-3">Register for Event <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rândul de jos: Text despre eveniment, Agenda și Cardul lateral -->
+        <div class="row g-5">
+            <!-- Coloana din stânga (About + Agenda) -->
+            <div class="col-lg-8">
+                
+                <div class="mb-5">
+                    <h3 class="serif-font mb-3">About this event</h3>
+                    <p class="text-muted" style="line-height: 1.8; font-size: 1.05rem;">
+                        Join leading researchers and industry experts for a day of insightful talks, 
+                        panel discussions and networking opportunities.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="serif-font mb-4">Event Agenda</h3>
+                    <div class="agenda-list">
+                        <div class="agenda-item d-flex mb-3 pb-3 border-bottom">
+                            <div class="agenda-time fw-bold me-5" style="min-width: 130px; color: var(--navy);">09:00 – 10:00</div>
+                            <div class="agenda-desc text-muted">Opening Ceremony</div>
+                        </div>
+                        <div class="agenda-item d-flex mb-3 pb-3 border-bottom">
+                            <div class="agenda-time fw-bold me-5" style="min-width: 130px; color: var(--navy);">10:00 – 11:00</div>
+                            <div class="agenda-desc text-muted">Keynote Speech</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Coloana din dreapta (Cardul Event Details) -->
+            <div class="col-lg-4">
+                <div class="event-details-card p-4 rounded-4">
+                    <div class="mb-3 text-navy">
+                        <i class="far fa-calendar-alt fa-2x"></i>
+                    </div>
+                    <h4 class="serif-font mb-4">Event Details</h4>
+                    
+                    <div class="mb-3">
+                        <span class="text-muted small d-block">Date:</span>
+                        <span class="fw-semibold" style="color: var(--navy);">Apr 24, 2025</span>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <span class="text-muted small d-block">Time:</span>
+                        <span class="fw-semibold" style="color: var(--navy);">09:00 – 17:00</span>
+                    </div>
+                    
+                    <div>
+                        <span class="text-muted small d-block">Location:</span>
+                        <span class="fw-semibold" style="color: var(--navy);">Main Auditorium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

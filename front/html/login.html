@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Events - Login & Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="auth-body">
+
+    <div class="login-container">
+        <!-- Partea Stângă -->
+        <div class="login-left">
+            <i class="fas fa-graduation-cap fa-3x mb-3"></i>
+            <h2 class="serif-font">Academic Events</h2>
+            <div class="divider"></div>
+            <p>Be part of our academic community.</p>
+        </div>
+
+        <!-- Partea Dreaptă -->
+        <div class="login-right">
+            <div class="auth-tabs">
+                <div class="auth-tab active" id="tab-login" onclick="switchTab('login')">Login</div>
+                <div class="auth-tab" id="tab-register" onclick="switchTab('register')">Register</div>
+            </div>
+
+            <!-- FORMULAR LOGIN -->
+            <div id="login-form">
+                <h3 class="serif-font mb-1">Welcome back!</h3>
+                <p class="text-muted mb-4" style="font-size: 0.9rem;">Log in to your account</p>
+                
+                <form id="loginForm" novalidate>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="far fa-envelope text-muted"></i></span>
+                            <input type="email" id="login-email" class="form-control with-icon" placeholder="Email address" required>
+                        </div>
+                        <small class="error-msg" id="login-email-error"></small>
+                    </div>
+                    <div class="mb-4">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-lock text-muted"></i></span>
+                            <input type="password" id="login-password" class="form-control with-icon" placeholder="Password" required>
+                            <span class="input-group-text toggle-password" style="border-left: none; cursor: pointer;" data-target="login-password">
+                                <i class="far fa-eye text-muted"></i>
+                            </span>
+                        </div>
+                        <small class="error-msg" id="login-password-error"></small>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <a href="#" class="auth-link" style="font-size: 0.85rem;">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-submit mb-3">Login <i class="fas fa-arrow-right ms-2"></i></button>
+                    
+                    <p class="text-center text-muted" style="font-size: 0.9rem;">
+                        Don't have an account? <a href="#" class="auth-link fw-semibold" onclick="switchTab('register')">Register</a>
+                    </p>
+                </form>
+            </div>
+
+            <!-- FORMULAR REGISTER -->
+            <div id="register-form">
+                <h3 class="serif-font mb-1">Create an account</h3>
+                <p class="text-muted mb-4" style="font-size: 0.9rem;">Join our academic community</p>
+                
+                <form id="registerForm" novalidate>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="far fa-user text-muted"></i></span>
+                            <input type="text" id="register-name" class="form-control with-icon" placeholder="Full Name" required>
+                        </div>
+                        <small class="error-msg" id="register-name-error"></small>
+                    </div>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="far fa-envelope text-muted"></i></span>
+                            <input type="email" id="register-email" class="form-control with-icon" placeholder="Email address" required>
+                        </div>
+                        <small class="error-msg" id="register-email-error"></small>
+                    </div>
+                    <div class="mb-4">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-lock text-muted"></i></span>
+                            <input type="password" id="register-password" class="form-control with-icon" placeholder="Password" required>
+                            <span class="input-group-text toggle-password" style="border-left: none; cursor: pointer;" data-target="register-password">
+                                <i class="far fa-eye text-muted"></i>
+                            </span>
+                        </div>
+                        <small class="error-msg" id="register-password-error"></small>
+                    </div>
+
+                    <button type="submit" class="btn-submit mb-3">Register <i class="fas fa-arrow-right ms-2"></i></button>
+                    
+                    <p class="text-center text-muted" style="font-size: 0.9rem;">
+                        Already have an account? <a href="#" class="auth-link fw-semibold" onclick="switchTab('login')">Login</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // --- Comutare tab-uri Login/Register ---
+        function switchTab(tab) {
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            const tabLogin = document.getElementById('tab-login');
+            const tabRegister = document.getElementById('tab-register');
+
+            if (tab === 'login') {
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+                tabLogin.classList.add('active');
+                tabRegister.classList.remove('active');
+            } else {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+                tabLogin.classList.remove('active');
+                tabRegister.classList.add('active');
+            }
+        }
+
+        // --- Afișare/ascundere parolă ---
+        document.querySelectorAll('.toggle-password').forEach(function(toggle) {
+            toggle.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const input = document.getElementById(targetId);
+                const icon = this.querySelector('i');
+
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    input.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
+        });
+
+        // --- Validare ---
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const specialCharRegex = /[!@#$%^&*(),.?":{}|<>_\-+=\[\]\\\/;'`~]/;
+        const uppercaseRegex = /[A-Z]/;
+        const digitRegex = /[0-9]/;
+
+        function showError(inputId, errorId, message) {
+            const input = document.getElementById(inputId);
+            const errorEl = document.getElementById(errorId);
+            input.classList.add('is-invalid');
+            errorEl.textContent = message;
+            errorEl.style.display = 'block';
+        }
+
+        function clearError(inputId, errorId) {
+            const input = document.getElementById(inputId);
+            const errorEl = document.getElementById(errorId);
+            input.classList.remove('is-invalid');
+            errorEl.textContent = '';
+            errorEl.style.display = 'none';
+        }
+
+        // Validare Login
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let valid = true;
+
+            const email = document.getElementById('login-email').value.trim();
+            const password = document.getElementById('login-password').value;
+
+            clearError('login-email', 'login-email-error');
+            clearError('login-password', 'login-password-error');
+
+            if (!emailRegex.test(email)) {
+                showError('login-email', 'login-email-error', 'Introdu o adresă de email validă (ex: nume@domeniu.com).');
+                valid = false;
+            }
+
+            if (password.length === 0) {
+                showError('login-password', 'login-password-error', 'Parola este obligatorie.');
+                valid = false;
+            }
+
+            if (valid) {
+                alert('Login valid! (aici vei conecta backend-ul)');
+            }
+        });
+
+        // Validare Register
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let valid = true;
+
+            const name = document.getElementById('register-name').value.trim();
+            const email = document.getElementById('register-email').value.trim();
+            const password = document.getElementById('register-password').value;
+
+            clearError('register-name', 'register-name-error');
+            clearError('register-email', 'register-email-error');
+            clearError('register-password', 'register-password-error');
+
+            if (name.length < 2) {
+                showError('register-name', 'register-name-error', 'Introdu numele complet (minim 2 caractere).');
+                valid = false;
+            }
+
+            if (!emailRegex.test(email)) {
+                showError('register-email', 'register-email-error', 'Introdu o adresă de email validă (ex: nume@domeniu.com).');
+                valid = false;
+            }
+
+            // Validare parolă completă
+            if (password.length < 6) {
+                showError('register-password', 'register-password-error', 'Parola trebuie să aibă minim 6 caractere.');
+                valid = false;
+            } else if (!uppercaseRegex.test(password)) {
+                showError('register-password', 'register-password-error', 'Parola trebuie să conțină cel puțin o literă mare (A-Z).');
+                valid = false;
+            } else if (!digitRegex.test(password)) {
+                showError('register-password', 'register-password-error', 'Parola trebuie să conțină cel puțin o cifră (0-9).');
+                valid = false;
+            } else if (!specialCharRegex.test(password)) {
+                showError('register-password', 'register-password-error', 'Parola trebuie să conțină cel puțin un caracter special (!@#$% etc.).');
+                valid = false;
+            }
+
+            if (valid) {
+                alert('Cont creat cu succes! (aici vei conecta backend-ul)');
+            }
+        });
+
+        // Curăță eroarea la tastare
+        ['login-email', 'login-password', 'register-name', 'register-email', 'register-password'].forEach(function(id) {
+            document.getElementById(id).addEventListener('input', function() {
+                this.classList.remove('is-invalid');
+                const errorEl = document.getElementById(id + '-error');
+                if (errorEl) { errorEl.style.display = 'none'; }
+            });
+        });
+    </script>
+</body>
+</html>
