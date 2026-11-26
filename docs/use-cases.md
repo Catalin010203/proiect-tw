@@ -1,9 +1,6 @@
 
 # Use Cases - Academic Events
 
-Fiecare scenariu contine preconditiile, pasii principali, fluxurile de eroare si criteriile de acceptare prin care se
-poate verifica functionalitatea. Endpoint-urile mentionate sunt descrise in [data-model.md](data-model.md#6-endpoint-uri-propuse).
-
 ## UC1. Inregistrarea si autentificarea
 
 **Actor:** Vizitator / Utilizator inregistrat
