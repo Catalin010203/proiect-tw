@@ -1,5 +1,6 @@
 package com.academicevents.service;
 
+import com.academicevents.dto.AuthResponse;
 import com.academicevents.dto.RegisterRequest;
 import com.academicevents.model.User;
 import com.academicevents.model.UserRole;
@@ -38,5 +39,19 @@ public class AuthService {
         );
 
         userRepository.save(user);
+    }
+
+    /** Datele trimise frontendului dupa login (fara parola). */
+    public AuthResponse getAuthResponse(String email) {
+        User user = userRepository.findByEmailIgnoreCase(email)
+                .orElseThrow(() -> new IllegalStateException("Utilizatorul autentificat nu a fost gasit"));
+
+        return new AuthResponse(
+                user.getId(),
+                user.getFirstName(),
+                user.getLastName(),
+                user.getEmail(),
+                user.getRole()
+        );
     }
 }
